@@ -1,0 +1,3 @@
+# Third-party code
+src/html5-shiv.js linguist-vendored
+src/es5-forEach.js linguist-vendored
