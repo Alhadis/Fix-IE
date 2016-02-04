@@ -9,26 +9,32 @@
  *                                by Object.defineProperty.
  * @return {HTMLElement}
  */
-var IE8PP = function(obj){
+if(function(){
+	try{Object.defineProperty({}, "s", {value: true})}
+	catch(e){return true}
+}()){
 
-	if(obj instanceof Element)
-		return obj;
+	window.IE8PP = function(obj){
 
-	if("function" === typeof obj)
-		return function(){
+		if(obj instanceof Element)
+			return obj;
+
+		if("function" === typeof obj)
+			return function(){
+				var shadow = document.createElement("s");
+				for(var p in obj.prototype)
+					shadow[p] = obj.prototype[p];
+				shadow.prototype = obj.prototype;
+				obj.apply(shadow, arguments);
+				return shadow;
+			}
+
+		else{
 			var shadow = document.createElement("s");
-			for(var p in obj.prototype)
-				shadow[p] = obj.prototype[p];
-			shadow.prototype = obj.prototype;
-			obj.apply(shadow, arguments);
+			for(var p in obj)
+				shadow[p] = obj[p];
+			shadow.prototype = obj;
 			return shadow;
 		}
-
-	else{
-		var shadow = document.createElement("s");
-		for(var p in obj)
-			shadow[p] = obj[p];
-		shadow.prototype = obj;
-		return shadow;
-	}
-};
+	};
+}
