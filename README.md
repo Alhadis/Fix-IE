@@ -7,7 +7,7 @@ Ironically-named bundle of polyfills for Internet Explorer 8-9.
 Contents:
 ---------
 * [HTML5 Shiv 3.7.3](https://github.com/aFarkas/html5shiv)
-* [Hack to get `Object.defineProperty` working on native JS objects](#IE8PP).
+* [Hack to get `Object.defineProperty` working on native JS objects](#ie8pp).
 * EventTarget methods:
 	- `addEventListener`
 	- `removeEventListener`
