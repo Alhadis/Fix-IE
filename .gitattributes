@@ -1,3 +1,6 @@
 # Third-party code
 src/html5-shiv.js linguist-vendored
 src/es5-forEach.js linguist-vendored
+
+# Not third-party, but it IS maintained externally
+src/token-list.js linguist-vendored
