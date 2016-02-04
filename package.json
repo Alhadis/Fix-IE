@@ -1,0 +1,16 @@
+{
+	"name": "fix-ie",
+	"version": "1.0.0",
+	"description": "Ironically-named bundle of useful polyfills for Internet Explorer 8-9",
+	"keywords": [
+		"IE8", "IE9", "IE", "IE8PP", "MSIE", "Internet Explorer", "polyfill",
+		"defineProperty", "addEventListener", "removeEventListener", "classList", "DOMTokenList",
+		"childElementCount", "firstElementChild", "lastElementChild",
+		"nextElementSibling", "previousElementSibling", "getComputedStyle",
+		"innerWidth", "innerHeight", "pageXOffset", "pageYOffset"
+	],
+	"repository": "https://github.com/Alhadis/Fix-IE",
+	"license": "ISC",
+	"dependencies": {},
+	"main": "dist/ie.lteIE9.js"
+}
