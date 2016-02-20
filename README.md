@@ -18,6 +18,8 @@ Contents:
 	- `el.lastElementChild`
 	- `el.nextElementSibling`
 	- `el.previousElementSibling`
+* Node-related properties:
+	- `node.textContent`
 * Window-related properties/methods:
 	- `window.getComputedStyle`
 	- `window.innerWidth`
@@ -27,6 +29,7 @@ Contents:
 * Various ES5/ES6 class extensions:
 	- `Array.prototype.forEach`
 	- `Array.isArray`
+	- `ChildNode.remove`
 	- `Number.isNaN`
 	- `Date.now`
 	- `String.prototype.trim`

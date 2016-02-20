@@ -6,7 +6,8 @@
 		"defineProperty", "addEventListener", "removeEventListener", "classList", "DOMTokenList",
 		"childElementCount", "firstElementChild", "lastElementChild",
 		"nextElementSibling", "previousElementSibling", "getComputedStyle",
-		"innerWidth", "innerHeight", "pageXOffset", "pageYOffset"
+		"innerWidth", "innerHeight", "pageXOffset", "pageYOffset",
+		"textContent", "innerText"
 	],
 	"license": "ISC",
 	"moduleType": "globals",
