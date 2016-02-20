@@ -76,6 +76,9 @@ $(DEST):
 	
 	# ChildNode.remove
 	$(call add,ChildNode.remove,remove.js)
+	
+	# Node.textContent
+	$(call add,Node.textContent,text-content.js)
 
 
 # Headings with commas, which would be interpreted by Make as argument delimiters
