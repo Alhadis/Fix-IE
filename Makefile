@@ -67,6 +67,9 @@ $(DEST):
 	echo "" >> $@
 	$(call add,$(EL_PROPS),IE8-child-elements.js)
 	$(call add,$(OFFSETS),IE8-offsets.js)
+	
+	# ChildNode.remove
+	$(call add,ChildNode.remove,remove.js)
 
 
 # Headings with commas, which would be interpreted by Make as argument delimiters
