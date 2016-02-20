@@ -6,13 +6,18 @@ DEST := dist/ie.lteIE9.js
 .SILENT: $(DEST)
 .ONESHELL:
 
-all: clean $(DEST)
+all: truncate $(DEST)
 
-# Deletes the stuff we made
+# Delete the stuff we made
 clean:
 	@rm -f $(DEST)
 
-.PHONY: clean
+# Truncate the target file. Useful to maintain hard-links.
+truncate:
+	@printf '' > $(DEST)
+
+
+.PHONY: clean truncate $(DEST)
 
 
 #===============================================================================
@@ -40,7 +45,8 @@ endef
 #
 $(DEST):
 	# HTML5 shiv
-	cp src/html5-shiv.js $@; echo "" >> $@;
+	xargs -0 < src/html5-shiv.js printf %s > $@; echo "" >> $@;
+	exit;
 	
 	$(call add,add/removeEventListener,IE8-addEventListener.js)
 	
