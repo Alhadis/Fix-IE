@@ -26,8 +26,8 @@ Contents:
 	- `window.innerHeight`
 	- `window.pageXOffset`
 	- `window.pageYOffset`
-* Various ES5/ES6 class extensions:
-	- `Array.prototype.forEach`
+* Various ES5/ES6 language extensions:
+	- ES5 Array extensions (`every, filter, forEach, indexOf, lastIndexOf, map, reduce, reduceRight, some`)
 	- `Array.isArray`
 	- `ChildNode.remove`
 	- `Number.isNaN`
@@ -41,7 +41,7 @@ Credits:
 --------
 
 * HTML5 Shiv by [these guys](https://github.com/aFarkas/html5shiv).
-* `forEach` polyfill pinched from the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Polyfill).
+* [Array polyfills](src/es5-arrays.js) all pinched from the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
 * Everything else by me
 
 

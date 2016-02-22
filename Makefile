@@ -56,9 +56,9 @@ $(DEST):
 	# getComputedStyle
 	$(call add,getComputedStyle,IE8-getComputedStyle.js)
 	
-	# Various methods too trivial to warrant their own files
+	# ECMAScript extensions
 	echo "" >> $@
-	$(call add,ECMAScript5,es5-forEach.js es5-filter.js)
+	$(call add,ECMAScript extensions,es5-arrays.js)
 	cat $(SRC)/es5-methods.js >> $@
 	
 	# Version flagging
