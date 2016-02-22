@@ -14,6 +14,7 @@ window.getComputedStyle=window.getComputedStyle||function(t){if(!t)return null;v
 
 /** ECMAScript5 */
 Array.prototype.forEach||(Array.prototype.forEach=function(r,t){var o,n;if(null===this)throw new TypeError(" this is null or not defined");var e=Object(this),i=e.length>>>0;if("function"!=typeof r)throw new TypeError(r+" is not a function");for(arguments.length>1&&(o=t),n=0;i>n;){var a;n in e&&(a=e[n],r.call(o,a,n,e)),n++}});
+Array.prototype.filter||(Array.prototype.filter=function(r){"use strict";if(void 0===this||null===this)throw new TypeError;var t=Object(this),e=t.length>>>0;if("function"!=typeof r)throw new TypeError;for(var o,i=[],n=arguments.length>=2?arguments[1]:void 0,f=0;e>f;f++)f in t&&r.call(n,o=t[f],f,t)&&i.push(o);return i});
 Date.now                = Date.now                || function(){return +new Date};
 String.prototype.trim   = String.prototype.trim   || function(){return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "");};
 Object.defineProperties = Object.defineProperties || function(obj, props){for(var i in props) Object.defineProperty(obj, i, props[i]);};

@@ -58,7 +58,7 @@ $(DEST):
 	
 	# Various methods too trivial to warrant their own files
 	echo "" >> $@
-	$(call add,ECMAScript5,es5-forEach.js)
+	$(call add,ECMAScript5,es5-forEach.js es5-filter.js)
 	cat $(SRC)/es5-methods.js >> $@
 	
 	# Version flagging
