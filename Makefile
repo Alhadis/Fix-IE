@@ -24,7 +24,7 @@ truncate:
 
 # Compress a JavaScript resource and write the result to DEST
 define minify
-	$(foreach js,$(1),uglifyjs -c --mangle < $(SRC)/$(js) >> $(DEST);)
+	$(foreach js,$(1),uglifyjs -c --mangle --ie8 < $(SRC)/$(js) >> $(DEST);)
 endef
 
 

@@ -48,11 +48,7 @@
 
 		Object.defineProperty(Element.prototype, "addEventListener",    {value: addEvent});
 		Object.defineProperty(Element.prototype, "removeEventListener", {value: removeEvent});
-		document.addEventListener     = addEvent;
-		document.removeEventListener  = removeEvent;
-
-		/** Reroute the window's add/removeEventListener methods to the document, since IE8 has "issues" with events bubbling to the window, apparently. */
-		window.addEventListener       = function(){ addEvent.apply(document, arguments);    };
-		window.removeEventListener    = function(){ removeEvent.apply(document, arguments); };
+		document.addEventListener     = window.addEventListener     = addEvent;
+		document.removeEventListener  = window.removeEventListener  = removeEvent;
 	}
 }());
