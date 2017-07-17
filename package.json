@@ -1,6 +1,6 @@
 {
 	"name": "fix-ie",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "Ironically-named bundle of useful polyfills for Internet Explorer 8-9",
 	"keywords": [
 		"IE8", "IE9", "IE", "IE8PP", "MSIE", "Internet Explorer", "polyfill",
